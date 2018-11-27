@@ -18,13 +18,13 @@ export default {
 
 <style>
 #header{
-    background-color: gray;
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px 30px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
 }
 h1 {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 60px;
 }
 </style>
