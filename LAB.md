@@ -12,7 +12,7 @@ Build a searchable, sortable pokemon viewer. The lab includes the pokemon data y
 
 Basic structure is like:
 
-```sh
+```
 +-------------------------+
 |  Filter and Sort        |
 +-------------------------+
@@ -26,7 +26,7 @@ Basic structure is like:
 
 ## Components
 
-```sh
+```
 App
  |
  +-- Header
