@@ -90,14 +90,24 @@ Receives the filtered and sorted results from app and generates `Pokemon` tile c
 
 ## Commit History
 
-Your commits should have _at least_ this level of granularity (there can be some variability in 
-order, but design of html/css should come before making the component dynamic):
+Your commits should have _at least_ this level of granularity (there can be some variability in order, but design of html/css should come before making the component dynamic):
 
 1. Design (HTML and CSS) of `Pokedex` and `Pokemon`
 1. Render list of all Pokemon in `Pokedex`
 1. First filter term working
 1. Commits additional filter term(s) working
 1. Sort working
+
+## Build
+
+Travis CI:
+* On for rest of BC2
+* `.travis.yml` included in this lab
+* Add `"test": "npm run lint"` to your `package.json` `scripts`
+
+Git:
+* `.gitignore` for `node_modules`
+* Included in this lab
 
 ## Rubric
 
