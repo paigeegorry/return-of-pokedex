@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header v-bind:filter="filter"/>
-    {{filter}}
-    <Pokemons v-bind:pokemons="filtered"/>
+    <Header v-bind:filter="filter"
+      v-bind:sort="sort"/>
+    <Pokemons v-bind:pokemons="sortedPokemon"/>
   </div>
 </template>
 
@@ -21,6 +21,10 @@ export default {
         defense: 0,
         pokemon: '',
         type: ''
+      },
+      sort: {
+        field: 'pokemon',
+        direction: 1
       }
     };
   },
@@ -34,7 +38,26 @@ export default {
         const hasName = !this.filter.pokemon || pokemon.pokemon.includes(this.filter.pokemon);
         const hasAttack = !this.filter.attack || pokemon.attack >= this.filter.attack; 
         const hasDefense = !this.filter.defense || pokemon.defense >= this.filter.defense;
-        return hasAttack && hasDefense && hasName;
+        const hasType = !this.filter.type || pokemon.type_1 === this.filter.type || 
+        pokemon.type_2 === this.filter.type;
+        return hasAttack && hasDefense && hasName && hasType;
+      });
+    },
+    // eslint-disable-next-line vue/return-in-computed-property
+    sortedPokemon() {
+      const field = this.sort.field;
+      // const direction = this.sort.direction;
+
+      return this.filtered.slice().sort((a, b) => {
+        if(a[field] > b[field]){
+          return 1;
+        }
+
+        if(a[field] < b[field]){
+          return -1;
+        }
+        
+        return 0;
       });
     }
   }

@@ -5,7 +5,8 @@
             <h3>{{ pokemon.pokemon }}</h3>
             <p>Attack: {{pokemon.attack}}</p>
             <p>Defense: {{pokemon.defense}}</p>
-            <p>Type: {{pokemon.type_1}}</p>
+            <p>Type 1: {{pokemon.type_1}}</p>
+            <p>Type 2: {{pokemon.type_2}}</p>
         </div>
     </li>
 </template>
