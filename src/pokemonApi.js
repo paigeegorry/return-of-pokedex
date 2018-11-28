@@ -1,4 +1,4 @@
-import pokemons from '../return-of-pokedex/pokedex.js';
+import pokemons from '../pokedex.js';
 
 const types = [];
 pokemons.forEach(pokemon => {
