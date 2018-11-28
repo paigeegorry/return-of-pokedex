@@ -32,6 +32,10 @@
                 <option value="attack">Attack</option>
                 <option value="defense">Defense</option>
             </select>
+            <select v-model="sort.direction">
+                <option value="1">Ascending</option>
+                <option value="-1">Descending</option>
+            </select>
         </label>
     </section>
 </template>

@@ -46,15 +46,15 @@ export default {
     // eslint-disable-next-line vue/return-in-computed-property
     sortedPokemon() {
       const field = this.sort.field;
-      // const direction = this.sort.direction;
+      const direction = this.sort.direction;
 
       return this.filtered.slice().sort((a, b) => {
         if(a[field] > b[field]){
-          return 1;
+          return 1 * direction;
         }
 
         if(a[field] < b[field]){
-          return -1;
+          return -1 * direction;
         }
         
         return 0;
