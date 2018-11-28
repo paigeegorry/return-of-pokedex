@@ -7,11 +7,11 @@
         </label>
         <label>
             Attack:
-            <input v-model.number="filter.attack" type="number" step="50">
+            <input v-model.number="filter.attack" type="number" step="50" min="1">
         </label>
         <label>
             Defense:
-            <input v-model.number="filter.defense" type="number" step="50">
+            <input v-model.number="filter.defense" type="number" step="50" min="1">
         </label>
         <label>
             Type:
@@ -27,8 +27,9 @@
         <label>
             Sort by:
             <select v-model="sort.field">
+                <option value="all"></option>
                 <option value="pokemon">Name</option>
-                <option value="type">Type</option>
+                <option value="type">Type 1</option>
                 <option value="attack">Attack</option>
                 <option value="defense">Defense</option>
             </select>
@@ -57,13 +58,28 @@ export default {
 
 <style>
 #header{
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px 30px;
+    background: rgba(63, 63, 63, 0.7);
+    color: white;
+    padding: 30px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
 }
 h1 {
     text-transform: uppercase;
     font-size: 60px;
+}
+p, label {
+    font-size: 1.25em;
+}
+label {
+    font-weight: bold;
+    text-transform: uppercase;
+    /* display: block; */
+}
+
+@media(max-width: 1140px){
+    label {
+        display: block;
+    }
 }
 </style>
