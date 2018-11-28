@@ -43,7 +43,6 @@ export default {
         return hasAttack && hasDefense && hasName && hasType;
       });
     },
-    // eslint-disable-next-line vue/return-in-computed-property
     sortedPokemon() {
       const field = this.sort.field;
       const direction = this.sort.direction;
