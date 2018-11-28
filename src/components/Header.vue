@@ -1,18 +1,22 @@
 <template>
     <section id="header">
-        <div id="title">
-            <h1>Pokedex</h1>
-            <label>
-                Pokemon Name:
-                <input type="text">
-            </label>
-        </div>
+        <h1>Pokedex</h1>
+        <label>
+            Attack:
+            <input v-model.number="filter.attack" type="number" step="50">
+        </label>
+        <label>
+            Defense:
+            <input v-model.number="filter.defense" type="number" step="50">
+        </label>
     </section>
 </template>
 
 <script>
 export default {
-
+  props: {
+    filter: Object
+  }
 };
 </script>
 

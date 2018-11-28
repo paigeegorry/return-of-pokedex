@@ -10,13 +10,10 @@
 
 <script>
 import Pokemon from './Pokemon.vue';
-import pokemonApi from '../pokemonApi.js';
 
 export default {
-  data() {
-    return {
-      pokemons: pokemonApi.getPokemons()
-    };
+  props: {
+    pokemons: Array
   },
   components: {
     Pokemon
@@ -28,7 +25,6 @@ export default {
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
   grid-column-gap: 10px;
   grid-row-gap: 200px;
 	}
