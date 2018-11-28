@@ -2,6 +2,10 @@
     <section id="header">
         <h1>Pokedex</h1>
         <label>
+            Name:
+            <input v-model="filter.pokemon" type="text">
+        </label>
+        <label>
             Attack:
             <input v-model.number="filter.attack" type="number" step="50">
         </label>
@@ -9,11 +13,28 @@
             Defense:
             <input v-model.number="filter.defense" type="number" step="50">
         </label>
+        <label>
+            Type:
+            <select v-model="filter.type">
+                <option value="">All</option>
+                <option v-for="type in types"
+                    v-bind:key="type"
+                    v-bind:value="type">
+                {{type}}
+                </option>
+            </select>
+        </label>
     </section>
 </template>
 
 <script>
+import pokemonApi from '../pokemonApi.js';
 export default {
+  data() {
+    return {
+      types: pokemonApi.getTypes()
+    };
+  },
   props: {
     filter: Object
   }
