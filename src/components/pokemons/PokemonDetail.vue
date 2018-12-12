@@ -1,7 +1,7 @@
 <template>
     <section v-if="pokemon">
-        <p>Hello detail</p>
-        <h1>{{pokemon.pokemon}}</h1>
+        <h2>{{pokemon.pokemon}}</h2>
+        <a :href="pokemon.pokedex">Learn more.</a>
     </section>
 </template>
 
@@ -13,6 +13,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 
 </style>

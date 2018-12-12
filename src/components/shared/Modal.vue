@@ -11,9 +11,6 @@
 export default {
   props: {
     onClose: Function
-  },
-  created() {
-    console.log('Modal created');
   }
 };
 </script>

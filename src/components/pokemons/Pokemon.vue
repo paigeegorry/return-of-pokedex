@@ -46,9 +46,4 @@ h3, p {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-
-/* grass, fire, water, bug, normal, poison, electric, 
-ground, fairy, fighting, psychic, rock, ghost, ice,
-dragon, dark, steel, flying */
-
 </style>
