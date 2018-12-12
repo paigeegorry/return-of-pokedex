@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import pokemonApi from '../pokemonApi.js';
+import pokemonApi from '../../pokemonApi.js';
 export default {
   data() {
     return {
