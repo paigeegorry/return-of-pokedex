@@ -1,22 +1,37 @@
 <template>
     <section id="Pokemon">
+      <PokemonDetail :pokemon="selected"/>
         <ul>
             <Pokemon v-for="pokemon in pokemons"
-              v-bind:key="pokemon.pokemon"
-              v-bind:pokemon="pokemon"/>
+              :key="pokemon.pokemon"
+              :pokemon="pokemon"
+              :onSelect="handleSelect"/>
         </ul>
     </section>
 </template>
 
 <script>
 import Pokemon from './Pokemon.vue';
+import PokemonDetail from './PokemonDetail.vue';
 
 export default {
+  data() {
+    return {
+      selected: null
+    };
+  },
   props: {
     pokemons: Array
   },
   components: {
-    Pokemon
+    Pokemon,
+    PokemonDetail
+  },
+  methods: {
+    handleSelect(pokemon) {
+      this.selected = pokemon;
+      console.log('clicked!', this.selected.pokemon);
+    }
   }
 };
 </script>

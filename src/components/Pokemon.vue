@@ -1,6 +1,6 @@
 <template>
-    <li v-bind:class="pokemon.type_1">
-        <img v-bind:src="pokemon.url_image">
+    <li v-on:click="onSelect(pokemon)">
+        <img :src="pokemon.url_image">
         <div id="info">
             <h3>{{ pokemon.pokemon }}</h3>
             <p>Attack: {{pokemon.attack}}</p>
@@ -14,7 +14,8 @@
 <script>
 export default {
   props: {
-    pokemon: Object
+    pokemon: Object,
+    onSelect: Function
   }
 };
 </script>
