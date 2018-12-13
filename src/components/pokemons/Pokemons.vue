@@ -2,8 +2,9 @@
     <section id="Pokemon">
 
       <transition name="bounce">
-        <Modal v-if="showModal" :onClose="() => showModal = false" id="modal">
-          <PokemonDetail :pokemon="selected"/>
+        <Modal v-if="showModal" 
+          :onClose="() => showModal = false" id="modal">
+            <PokemonDetail :pokemon="selected"/>
         </Modal>
       </transition>
 
@@ -16,11 +17,12 @@
             v-on:enter="enter"
             v-on:leave="leave">
 
-          <Pokemon v-for="pokemon in pokemons"
-            :key="pokemon.pokemon"
-            :pokemon="pokemon"
-            :onSelect="handleSelect"/>
-         </transition-group>
+            <Pokemon v-for="pokemon in pokemons"
+              :key="pokemon.pokemon"
+              :pokemon="pokemon"
+              :onSelect="handleSelect"/>
+         
+          </transition-group>
         </div>
         
     </section>
