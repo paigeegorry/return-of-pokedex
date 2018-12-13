@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 li {
     height: 300px;
     list-style: none;

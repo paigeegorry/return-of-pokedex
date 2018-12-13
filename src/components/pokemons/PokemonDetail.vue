@@ -29,13 +29,13 @@ export default {
 <style lang="postcss" scoped>
 
 section {
-  padding: 50px;
+  padding: 10px;
   text-align: center;
-  margin: 20px;
+  margin: 10px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em;
+  font-size: 1em;
   p {
-    padding: 10px;
+    padding: 2px;
   }
 }
 

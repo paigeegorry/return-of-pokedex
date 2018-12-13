@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header v-bind:filter="filter"
-      v-bind:sort="sort"/>
-    <Pokemons v-bind:pokemons="sortedPokemon"/>
+    <Header :filter="filter"
+      :sort="sort"/>
+    <Pokemons :pokemons="sortedPokemon"/>
   </div>
 </template>
 
