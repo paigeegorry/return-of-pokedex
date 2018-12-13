@@ -20,30 +20,33 @@ export default {
 };
 </script>
 
-<style >
+<style lang="postcss">
 li {
     height: 300px;
     list-style: none;
     position: relative;
     text-align: center;
+    
+    img {
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #info {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        
+        h3, p {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
 }
-img {
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-#info {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.8);
-}
-h3, p {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
 }
 </style>

@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+
 section {
   padding: 50px;
   text-align: center;
@@ -36,15 +37,6 @@ section {
   p {
     padding: 10px;
   }
-  span {
-    visibility: hidden;
-  }
-  span:hover {
-    visibility: visible;
-  }
-  a:hover {
-    font-weight: bold;
-  }
-  
 }
+
 </style>

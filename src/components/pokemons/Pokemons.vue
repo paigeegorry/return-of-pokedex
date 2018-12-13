@@ -15,6 +15,7 @@
             v-on:before-enter="beforeEnter"
             v-on:enter="enter"
             v-on:leave="leave">
+
           <Pokemon v-for="pokemon in pokemons"
             :key="pokemon.pokemon"
             :pokemon="pokemon"
@@ -80,13 +81,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
+
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 60px;
 	}
+
 #modal {
   z-index: 5;
 }
